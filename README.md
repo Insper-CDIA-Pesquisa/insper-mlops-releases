@@ -19,12 +19,10 @@ brew tap Insper-CDIA-Pesquisa/mlops https://github.com/Insper-CDIA-Pesquisa/insp
 brew install mlops
 ```
 
-### Windows (PowerShell)
+### Windows (PowerShell como Administrador)
 
 ```powershell
-Invoke-WebRequest -Uri "https://github.com/Insper-CDIA-Pesquisa/insper-mlops-releases/releases/latest/download/mlops-windows-amd64.exe" -OutFile "$env:LOCALAPPDATA\mlops.exe"
-$path = [Environment]::GetEnvironmentVariable("Path", "User")
-if ($path -notlike "*$env:LOCALAPPDATA*") { [Environment]::SetEnvironmentVariable("Path", "$path;$env:LOCALAPPDATA", "User") }
+Invoke-WebRequest -Uri "https://github.com/Insper-CDIA-Pesquisa/insper-mlops-releases/releases/latest/download/mlops-windows-amd64.exe" -OutFile "C:\Windows\mlops.exe"
 ```
 
 Depois feche e reabra o terminal.
@@ -35,9 +33,12 @@ Depois feche e reabra o terminal.
 pip install insper-mlops
 ```
 
-## Pré-requisito
+## Pré-requisitos
 
-O [GitHub CLI (gh)](https://cli.github.com/) deve estar instalado para autenticação.
+- [Git](https://git-scm.com/download/win) — necessário para clonar templates
+- [GitHub CLI (gh)](https://cli.github.com/) — necessário para autenticação
+
+> **Windows:** instale ambos com `winget install Git.Git` e `winget install GitHub.cli`
 
 ## Uso
 
