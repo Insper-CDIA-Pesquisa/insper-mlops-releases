@@ -19,12 +19,15 @@ brew tap Insper-CDIA-Pesquisa/mlops https://github.com/Insper-CDIA-Pesquisa/insp
 brew install mlops
 ```
 
-### Windows
+### Windows (PowerShell)
 
-1. Baixe `mlops-windows-amd64.exe` da [última release](https://github.com/Insper-CDIA-Pesquisa/insper-mlops-releases/releases/latest)
-2. Renomeie para `mlops.exe`
-3. Mova para uma pasta no PATH (ex: `C:\Users\SeuUsuario\bin\`)
-4. Execute `mlops start` no terminal
+```powershell
+Invoke-WebRequest -Uri "https://github.com/Insper-CDIA-Pesquisa/insper-mlops-releases/releases/latest/download/mlops-windows-amd64.exe" -OutFile "$env:LOCALAPPDATA\mlops.exe"
+$path = [Environment]::GetEnvironmentVariable("Path", "User")
+if ($path -notlike "*$env:LOCALAPPDATA*") { [Environment]::SetEnvironmentVariable("Path", "$path;$env:LOCALAPPDATA", "User") }
+```
+
+Depois feche e reabra o terminal.
 
 ### Via pip (alternativa — requer Python)
 
