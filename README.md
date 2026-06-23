@@ -4,6 +4,8 @@ Ferramenta de linha de comando para padronizar e automatizar projetos de MLOps n
 
 ## Instalação
 
+> **Nenhuma das opções abaixo requer Python instalado** (exceto a via pip).
+
 ### macOS / Linux (recomendado)
 
 ```bash
@@ -19,9 +21,12 @@ brew install mlops
 
 ### Windows
 
-Baixe o executável da [última release](https://github.com/Insper-CDIA-Pesquisa/insper-mlops-releases/releases/latest) e adicione ao PATH.
+1. Baixe `mlops-windows-amd64.exe` da [última release](https://github.com/Insper-CDIA-Pesquisa/insper-mlops-releases/releases/latest)
+2. Renomeie para `mlops.exe`
+3. Mova para uma pasta no PATH (ex: `C:\Users\SeuUsuario\bin\`)
+4. Execute `mlops start` no terminal
 
-### Via pip (requer Python)
+### Via pip (alternativa — requer Python)
 
 ```bash
 pip install insper-mlops
