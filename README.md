@@ -27,12 +27,6 @@ Invoke-WebRequest -Uri "https://github.com/Insper-CDIA-Pesquisa/insper-mlops-rel
 
 Depois feche e reabra o terminal.
 
-### Via pip (alternativa — requer Python)
-
-```bash
-pip install insper-mlops
-```
-
 ## Pré-requisitos
 
 - [Git](https://git-scm.com/download/win) — necessário para clonar templates
@@ -48,8 +42,3 @@ mlops start
 
 O comando interativo guia você na criação de um novo projeto MLOps.
 
-## Desinstalar
-
-```bash
-sudo rm /usr/local/bin/mlops
-```
